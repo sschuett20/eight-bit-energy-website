@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eight Bit Energy</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #ffffff;
-      color: #333;
+      color: #333333;
       margin: 0;
       padding: 2rem;
       text-align: center;
@@ -16,29 +16,59 @@
     header {
       padding: 1rem;
     }
+    /* Brand primary color from your guide */
     h1 {
       font-size: 2.5rem;
-      color: #1b998b;
+      color: #1B998B;  /* Electric blue / teal-ish */
     }
-    p {
+    p.tagline {
       font-size: 1.2rem;
+      color: #555555;
+      font-style: italic;
+    }
+    main {
+      margin-top: 2rem;
     }
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #888888;
+    }
+    /* Logo styling */
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-top: 1rem;
+    }
+    /* Button style if needed */
+    .contact-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1B998B;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .contact-button:hover {
+      background-color: #17a585;
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Logo: update the src to match your file path or URL -->
+    <img src="EightBigEnergyLogo.jpg" alt="Eight Bit Energy Logo" class="logo">
     <h1>Eight Bit Energy</h1>
-    <p><em>Putting your energy to better use</em></p>
+    <p class="tagline">Putting your energy to better use</p>
   </header>
 
   <main>
     <p>We help organizations navigate energy efficiency, electrification, and grid flexibility—with simple solutions that make your work easier.</p>
     <p>Reach out to learn how we can help you automate, optimize, and decarbonize your building operations.</p>
+
+    <a href="mailto:your-email@example.com" class="contact-button">Let's Talk</a>
   </main>
 
   <footer>
