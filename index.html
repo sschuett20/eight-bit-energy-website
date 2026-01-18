@@ -7,65 +7,127 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
       background-color: #ffffff;
       color: #333333;
-      margin: 0;
-      padding: 2rem;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1B998B;
+      padding: 1rem;
       text-align: center;
     }
-    header {
-      padding: 1rem;
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
     h1 {
       font-size: 2.5rem;
-      color: #1B998B; /* Brand color */
+      color: #1B998B;
     }
+
     p.tagline {
       font-size: 1.2rem;
       font-style: italic;
       color: #444444;
     }
+
     main {
-      margin-top: 2rem;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
     footer {
+      text-align: center;
       margin-top: 3rem;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #888888;
     }
+
     .logo {
       max-width: 200px;
       height: auto;
-      margin-top: 1rem;
     }
+
     .contact {
-      margin-top: 2rem;
       font-weight: bold;
       color: #1B998B;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://raw.githubusercontent.com/sschuett20/eight-bit-energy-website/main/EightBitEnergyLogo.jpg" alt="Eight Bit Energy Logo" class="logo">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#join">Join</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <img src="EightBitEnergyLogo.jpg" alt="Eight Bit Energy Logo" class="logo">
     <h1>Eight Bit Energy</h1>
     <p class="tagline">Putting your energy to better use</p>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <h2>Process Efficiency & Automation Consulting</h2>
-    <p>We help organizations simplify complex workflows, automate manual tasks, and unlock operational efficiencies using tailored digital tools.</p>
-    <p>From Excel macros to lightweight web apps, we build practical solutions that reduce time spent on repetitive work and improve accuracy.</p>
-    <p>Clients include small businesses, nonprofits, and mission-driven teams that want to do more—with less friction.</p>
 
-    <p class="contact">📧 eightbitenergy@gmail.com</p>
+    <section id="services">
+      <h2>Services</h2>
+      <p>We help organizations streamline workflows and automate repetitive tasks using simple, scalable tools—think spreadsheet macros, form automation, and workflow integrations that just work.</p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <p>Case studies coming soon. We’ve helped nonprofits, startups, and energy firms cut down time spent on repetitive processes while improving clarity and performance.</p>
+    </section>
+
+    <section id="join">
+      <h2>Join</h2>
+      <p>We’re always interested in collaborating with thoughtful developers, designers, and weirdos who love clarity. Reach out if you’re one of them.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Eight Bit Energy was founded by engineers who believe in simplifying work, not complicating it. We use technical expertise, good humor, and thoughtful design to get things done without the bloat.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="contact">📧 eightbitenergy@gmail.com</p>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Eight Bit Energy LLC
   </footer>
+
 </body>
 </html>
