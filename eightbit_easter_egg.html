@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eloise's Quest - Easter Egg</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00FF00;
+      font-family: "Courier New", monospace;
+      margin: 0;
+      padding: 2rem;
+    }
+    .scene {
+      display: none;
+      white-space: pre-wrap;
+      margin-top: 1rem;
+    }
+    .scene.active {
+      display: block;
+    }
+    button {
+      background-color: black;
+      border: 1px solid #00FF00;
+      color: #00FF00;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0.5rem;
+      font-family: "Courier New", monospace;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003300;
+    }
+  </style>
+</head>
+<body>
+  <h1>EL🪄ISE'S QUEST</h1>
+  <div id="scene1" class="scene active">
+    <p>
+Welcome to Burgertonville. A lovely village...
+
+Until the evil prince decreed:
+  - All tasks must be boring.
+  - All clothes must be grey.
+
+Eloise, our heroine, has a choice...
+
+Do nothing?
+Or set out to find Frank the Farsighted?
+
+    </p>
+    <button onclick="nextScene('scene2A')">Do nothing</button>
+    <button onclick="nextScene('scene2B')">Find Frank</button>
+  </div>
+
+  <div id="scene2A" class="scene">
+    <p>
+You return to long, pointless meetings
+and endless dreary data entry.
+
+THE END.
+    </p>
+  </div>
+
+  <div id="scene2B" class="scene">
+    <p>
+You travel into the mountains in search of Frank the Farsighted.
+
+Along the way, an ogre named Rhys blocks your path.
+He looks hungry.
+
+Do you run away?
+Or try to trick him?
+
+    </p>
+    <button onclick="nextScene('scene3A')">Run away</button>
+    <button onclick="nextScene('scene3B')">Trick him</button>
+  </div>
+
+  <div id="scene3A" class="scene">
+    <p>
+Rhys catches you and throws you into his cave.
+
+THE END.
+    </p>
+  </div>
+
+  <div id="scene3B" class="scene">
+    <p>
+You trick Rhys into thinking you're delivering a pizza.
+
+He decides not to eat you.
+Instead, he joins your quest.
+
+Together, you reach Frank the Farsighted's cottage.
+
+He gives you a wand and teaches two spells:
+  - Automation ✨
+  - Potayto Potahto 🥔
+
+Time to confront the evil prince...
+
+At the castle gate, you have two options:
+    </p>
+    <button onclick="nextScene('scene4A')">Rhys breaks down the gate</button>
+    <button onclick="nextScene('scene4B')">Rhys lifts you over the wall</button>
+  </div>
+
+  <div id="scene4A" class="scene">
+    <p>
+The guards fire spaghetti catapults!
+
+You're both captured and locked in the dungeon.
+
+THE END.
+    </p>
+  </div>
+
+  <div id="scene4B" class="scene">
+    <p>
+Rhys lifts you over the wall.
+
+You sneak into the prince’s chambers.
+
+You unleash a storm of potatoes until he begs for mercy.
+
+You return to Burgertonville.
+
+You cast Automation on every villager.
+
+Boring tasks vanish. 
+Color returns. Music plays. 
+The people rejoice.
+
+THE END.
+    </p>
+  </div>
+
+  <script>
+    function nextScene(id) {
+      document.querySelectorAll('.scene').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
