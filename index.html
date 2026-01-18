@@ -7,9 +7,9 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
       background-color: #ffffff;
       color: #333333;
+      margin: 0;
     }
 
     /* Navigation */
@@ -67,11 +67,50 @@
     .logo {
       max-width: 200px;
       height: auto;
+      cursor: pointer;
     }
 
     .contact {
       font-weight: bold;
       color: #1B998B;
+    }
+
+    /* Modal Styles */
+    #easterEggModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+    }
+
+    #easterEggModal .modal-content {
+      position: relative;
+      width: 90%;
+      height: 90%;
+      margin: 5% auto;
+      background: black;
+      border: 4px solid #00FF00;
+      box-shadow: 0 0 20px #00FF00;
+    }
+
+    #easterEggModal button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: black;
+      color: #00FF00;
+      border: 1px solid #00FF00;
+      padding: 0.25rem 0.5rem;
+      font-family: "Courier New", monospace;
+      cursor: pointer;
+    }
+
+    #easterEggModal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -89,7 +128,8 @@
 
   <!-- Header -->
   <header id="home">
-    <img src="EightBitEnergyLogo.jpg" alt="Eight Bit Energy Logo" class="logo">
+    <!-- Logo triggers Easter egg modal -->
+    <img src="EightBitEnergyLogo.jpg" alt="Eight Bit Energy Logo" class="logo" onclick="openModal()">
     <h1>Eight Bit Energy</h1>
     <p class="tagline">Putting your energy to better use</p>
   </header>
@@ -124,10 +164,27 @@
 
   </main>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 Eight Bit Energy LLC
   </footer>
+
+  <!-- Easter Egg Modal -->
+  <div id="easterEggModal">
+    <div class="modal-content">
+      <button onclick="closeModal()">X</button>
+      <iframe src="eightbit_easter_egg.html"></iframe>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal() {
+      document.getElementById("easterEggModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("easterEggModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
